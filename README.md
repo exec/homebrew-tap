@@ -8,8 +8,11 @@ This is a Homebrew tap that provides formulae for various command-line tools.
 # Add the tap
 brew tap exec/tap
 
-# Install httpping
+# Install any tool
 brew install httpping
+brew install portscope
+brew install rune
+brew install mlscan
 ```
 
 ## Available Formulae
@@ -35,6 +38,42 @@ httpping init
 
 # Run advanced monitoring
 httpping monitor -c httpping.yml
+```
+
+### portscope
+Advanced network port scanner with intelligent service detection.
+
+**Usage:**
+```bash
+# Scan a host
+portscope 192.168.1.1
+
+# Scan multiple hosts
+portscope 192.168.1.1-10
+```
+
+### rune
+A modern CLI text editor that bridges the gap between nano's simplicity and advanced features.
+
+**Usage:**
+```bash
+# Edit a file
+rune filename.txt
+
+# Create new file
+rune
+```
+
+### mlscan
+Machine learning-enhanced port scanner with adaptive performance.
+
+**Usage:**
+```bash
+# Basic scan
+mlscan 192.168.1.1
+
+# Show version
+mlscan --version
 ```
 
 ## Updating
