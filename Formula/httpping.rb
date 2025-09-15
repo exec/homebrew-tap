@@ -1,8 +1,8 @@
 class Httpping < Formula
   desc "Advanced HTTP monitoring and ping utility for modern infrastructure"
   homepage "https://github.com/exec/httpping"
-  url "https://github.com/exec/httpping/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "f54d2e3427c65e3a7d288c8de79c4dc60f7ca7d7d1896e18d9c4008592cd087a"
+  url "https://github.com/exec/httpping/archive/refs/tags/v0.2.3.tar.gz"
+  sha256 "0db13afca7c0fbddb8657f44533141c57c4e58ec40f85fcdc3a978fcac3c2a19"
   license "MIT"
 
   depends_on "rust" => :build
