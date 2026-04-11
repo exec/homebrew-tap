@@ -1,32 +1,29 @@
 class Rune < Formula
   desc "A modern CLI text editor that bridges the gap between nano's simplicity and advanced features"
   homepage "https://github.com/exec/rune"
+  version "1.4.1"
   license "MIT"
 
-  # Dynamic version detection
   livecheck do
     url :stable
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
-  version do
-    spec = self.class
-    # Fetch the latest tag from the API
-    json = Utils::JSON.parse(Utils::GitHub.open_api("https://api.github.com/repos/exec/rune/releases/latest"))
-    json["tag_name"].gsub(/^v/, "")
-  end
-
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/exec/rune/releases/download/v1.4.1/rune-macos-aarch64.tar.gz"
+      sha256 "be163c8f806f9a6502fb7502e0a8f36784a92aa38b2a2b34ed8e7f3ead8b1fc5"
     else
-      url "https://github.com/exec/rune/releases/download/v#{version}/rune-macos-x86_64.tar.gz"
+      url "https://github.com/exec/rune/releases/download/v1.4.1/rune-macos-x86_64.tar.gz"
+      sha256 "d13fd082eb201941c5826c420c76e61345bc11dcca2fec2b3baad5ad0e56dace"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/exec/rune/releases/download/v#{version}/rune-linux-aarch64.tar.gz"
+      url "https://github.com/exec/rune/releases/download/v1.4.1/rune-linux-aarch64.tar.gz"
+      sha256 "05f8392d7e19fc3a85cbb745be6d3e5f60960539d027aaea312e9142199c955f"
     else
-      url "https://github.com/exec/rune/releases/download/v#{version}/rune-linux-x86_64.tar.gz"
+      url "https://github.com/exec/rune/releases/download/v1.4.1/rune-linux-x86_64.tar.gz"
+      sha256 "24f08f4e2ea88d32ddf5c99d5a03cddd89fc918512fa6133508bbb45ecf67796"
     end
   end
 
@@ -35,7 +32,7 @@ class Rune < Formula
   end
 
   test do
-    output = shell_output("#{bin}/rune --help")
-    assert_match "A modern CLI text editor", output
+    output = shell_output("#{bin}/rune --version")
+    assert_match "rune", output
   end
 end
