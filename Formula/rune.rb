@@ -18,7 +18,7 @@ class Rune < Formula
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/exec/rune/releases/download/v#{version}/rune-macos-aarch64.tar.gz"
+      url "https://github.com/exec/rune/releases/download/v1.4.1/rune-macos-aarch64.tar.gz"
     else
       url "https://github.com/exec/rune/releases/download/v#{version}/rune-macos-x86_64.tar.gz"
     end
