@@ -1,7 +1,7 @@
 class Rune < Formula
   desc "A modern CLI text editor that bridges the gap between nano's simplicity and advanced features"
   homepage "https://github.com/exec/rune"
-  version "1.5.1"
+  version "1.5.2"
   license "MIT"
 
   livecheck do
@@ -11,8 +11,8 @@ class Rune < Formula
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/exec/rune/releases/download/v1.5.1/rune-macos-aarch64.tar.gz"
-      sha256 "7446643bed7652b338523cc73ba1cc1624b80d74a33191ed0b7ef45b5ae96686"
+      url "https://github.com/exec/rune/releases/download/v1.5.2/rune-macos-aarch64.tar.gz"
+      sha256 "3d47bbc1cb04e30715aff09fe9d271ecec5cd6ba891719f618415abd0562993e"
     else
       url "https://github.com/exec/rune/releases/download/v1.4.1/rune-macos-x86_64.tar.gz"
       sha256 "d13fd082eb201941c5826c420c76e61345bc11dcca2fec2b3baad5ad0e56dace"
